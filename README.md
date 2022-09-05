@@ -66,6 +66,13 @@ For building and running the application you need:
 </dependency>
 ```
 
+## Spring setting
+The setting of Spring can be found in main -> resources -> application.properties
+```
+spring.servlet.multipart.max-file-size=100MB
+```
+The max-file-size limits the size of an uploaded file from front-end to 100MB
+
 ## About this service
 When the project is running, there is only 1 API available.<br />
 The default port of the project that will be running on is 8080.<br />
@@ -89,12 +96,27 @@ Content-Type: text/plain
 ----WebKitFormBoundary7MA4YWxkTrZu0gW
 ```
 
-## Spring setting
-The setting of Spring can be found in main -> resources -> application.properties
+### Swagger 
+There is no swagger.yaml file in the project, but the swagger styled info will be listed in readme file:
 ```
-spring.servlet.multipart.max-file-size=100MB
+paths:
+  /parser:
+    post:
+      summary: Post a file, get a json array that contains all the numbers of file and the info of numbers.
+      consumes:
+         - multipart/form-data
+       parameters:
+         - in: formData
+           name: file
+           type: file
+	   required: true
+           description: The file to upload.
+      responses:
+        200:
+          description: Returns a json array
+	400: 
+	  description: Only html/xml/txt file can be accepted
 ```
-The max-file-size limits the size of an uploaded file from front-end to 100MB
 
 ## Author
 Haoshuang Lang(Steven)
