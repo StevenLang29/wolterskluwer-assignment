@@ -2,6 +2,10 @@
 The project is the assignment from Wolters Kluwer.
 The project can receive a file from frontend, and extract the numbers of the give file.
 
+## Assumptions
+* I assume that when the frontend post 2 files that both having the key named "file", only the first one will be parsed.
+* I assume when the text file contains 2 neighboring numbers, they will be parsed separately, for example, 20 will be returned as 2 with info like(line number:2 character position:73) and 0 with info like(line number:2 character position:74)
+
 ## Requirements
 For building and running the application you need:
 
