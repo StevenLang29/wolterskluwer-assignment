@@ -12,6 +12,8 @@ For building and running the application you need:
 ## How to run
 * Clone this repository
 * Make sure you are using JDK 13.0.2, and Maven
+* Use Intellij as IDE
+* Reload maven, click on sync button of pom.xml
 * Once the program runs, you will see messages like this:</br>
 ```
 2022-09-05 11:39:31.445  INFO 1548 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
