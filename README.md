@@ -5,6 +5,7 @@ The project can receive a file from frontend, and extract the numbers of the giv
 ## Assumptions
 * I assume that when the frontend post 2 files that both having the key named "file", only the first one will be parsed.
 * I assume when the text file contains 2 neighboring numbers, they will be parsed separately, for example, 20 will be returned as 2 with info like(line number:2 character position:73) and 0 with info like(line number:2 character position:74)
+* I assume when a file without any number is given, the system should return an empty json array like []
 
 ## Requirements
 For building and running the application you need:
